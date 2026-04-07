@@ -565,6 +565,20 @@ a {
         --space-md: 1.5rem;
     }
 
+    html, body {
+        overflow-x: hidden;
+    }
+
+    p, a, h1, h2, h3, h4, span {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+
+    .container {
+        padding: 0 1.2rem;
+    }
+
     .navbar {
         flex-direction: column;
         padding: 1rem;
@@ -578,15 +592,24 @@ a {
     }
 
     .nav-links a {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+    }
+    
+    .logo {
+        font-size: 1.2rem; /* Ensure logo fits on 320px screens */
     }
 
     .hero {
         padding-top: 10rem;
     }
+    
+    .hero-layout, .hero-content {
+        text-align: center;
+        align-items: center;
+    }
 
     .hero-large {
-        font-size: 2.5rem;
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
         text-shadow: 2px 2px 0px var(--accent-neon);
     }
 
@@ -596,7 +619,14 @@ a {
     }
 
     .hero p {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
     }
 
     .btn {
@@ -605,49 +635,63 @@ a {
     }
 
     .section-title {
-        font-size: 2.5rem;
+        font-size: clamp(2rem, 8vw, 2.5rem);
+    }
+
+    /* Centering Motivation part */
+    .letter-header, .contact-info, .letter-body {
+        text-align: center;
+    }
+    
+    .letter-header h2 {
+        font-size: clamp(2rem, 8vw, 2.5rem);
     }
 
     .letter-body {
         font-size: 1.05rem;
-        line-height: 1.6;
+        line-height: 1.5;
     }
 
     .letter-body p.signature {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
+    /* CV Settings */
     .bento-card {
         padding: 2rem 1.5rem;
     }
 
     .bento-card h3 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .timeline-item h4 {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
     }
 
+    /* Centering connect section */
     .resume-download {
         padding: 3rem 1.5rem;
+        text-align: center;
     }
 
     .resume-download h2 {
-        font-size: 2.5rem;
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
     }
 
-    .letter-header h2 {
-        font-size: 2.5rem;
+    /* Centering Footer */
+    .footer {
+        text-align: center;
     }
 
     .footer h2 {
-        font-size: 2.5rem;
+        font-size: clamp(2rem, 8vw, 2.5rem);
     }
     
     .footer-bottom {
         flex-direction: column;
         gap: 1.5rem;
         text-align: center;
+        align-items: center;
     }
 }
